@@ -1,11 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Bienvenido. Consulta la información de nuestras sucursales.">
+    <title>Inicio /elmikeladogit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: #172554;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem clamp(1.25rem, 6vw, 5rem);
+            background: #fff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .brand {
+            color: #172554;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #334155;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #2563eb;
+        }
+
+        main {
+            display: grid;
+            min-height: calc(100vh - 69px);
+            place-items: center;
+            padding: 3rem 1.25rem;
+            text-align: center;
+        }
+
+        .welcome {
+            max-width: 680px;
+        }
+
+        h1 {
+            margin: 0 0 1rem;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            letter-spacing: -0.05em;
+        }
+
+        p {
+            margin: 0 0 2rem;
+            color: #475569;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.9rem 1.3rem;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            background: #2563eb;
+            border-radius: 0.65rem;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    <header>
+        <a class="brand" href="index.html">Mi sitio</a>
+        <nav aria-label="Navegación principal">
+            <a href="sucursales.html">Sucursales</a>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h1>Hola, bienvenido</h1>
+            <p>Encuentra la sucursal más cercana y consulta su información.</p>
+            <a class="button" href="sucursales.html">Ver sucursales</a>
+        </section>
+    </main>
 </body>
 </html>
